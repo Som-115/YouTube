@@ -1,3 +1,5 @@
+// https://cloud.mongodb.com/v2/66b46449d0467003bc1d2219#/security/network/accessList => link to navigate to mongodb 
+
 // require('dotenv').config({path: './env'})
 import dotenv from "dotenv"
 
