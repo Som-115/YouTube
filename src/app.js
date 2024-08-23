@@ -4,6 +4,10 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+// routes import
+
+import userRouter from './routes/user.routes.js';
+const app = express();
 
 // app.use is mainly used for the middleware
 
@@ -25,6 +29,12 @@ app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
-const app = express()
 
-export { app }
+// // routes import
+
+// import userRouter from './routes/user.routes.js'
+
+// routes declaration 
+app.use("/api/v1/users", userRouter)
+
+export { app };

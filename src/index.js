@@ -6,7 +6,12 @@ import dotenv from "dotenv"
 // import mongoose from "mongoose";
 // import { DB_NAME } from "./constants";
 
+// import express from "express";
+// const app = express();
+// the above two lines also work same as line 14
+
 import connectDB from "./db/index.js";
+import { app } from "./app.js";
 
 dotenv.config({
     path: './env'
@@ -23,7 +28,7 @@ connectDB()
 })
 
 // we have to add then and catch here bcz the function 
-// connectDB will return a promise t;o handle that
+// connectDB will return a promise to handle that
 
 
 
