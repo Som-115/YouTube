@@ -31,7 +31,7 @@ const userSchema = new Schema(
             required: true,
         },
         coverImage: {
-            type: toString
+            type: String
         },
         watchHistory: [
             {
@@ -53,7 +53,9 @@ const userSchema = new Schema(
 )
 
 userSchema.pre("save", async function (next) {
-    if(!this.isModifide("password")) next();
+    if(!this.isModified("password")) {
+        return next();
+    }
     this.password = await bcrypt.hash(this.password, 10) // 10 is no of rounds
     next()
 })
