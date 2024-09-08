@@ -4,7 +4,8 @@ import { User } from "../models/user.model.js";
 import { uploadOnClodinary } from "../utils/cloudinary.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import jwt from "jsonwebtoken"
-import { Subscription } from "../models/subscription.model.js";
+//import { Subscription } from "../models/subscription.model.js";
+import mongoose from "mongoose";
 
 const generateAccessAndRefereshTokens = async(userId) => 
 {
